@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { Layout} from 'antd';
-import logo from 'C:\\Users\\777\\Desktop\\TorrentProject\\kztracker\\src\\radar.png';
+import logo from './radar.png';
 import './Header.css'
 
 const { Header } = Layout;
