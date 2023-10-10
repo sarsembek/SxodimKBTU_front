@@ -8,7 +8,7 @@ const { Header } = Layout;
 
 export const AppHeader = () => {
   return (
-    <Header
+    <Header class="app-header"
       style={{
         position: 'sticky',
         top: 0,
