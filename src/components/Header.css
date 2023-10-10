@@ -6,3 +6,19 @@
     background-color: #00DFA2;
     text-align: center;
 }
+.reg-block {
+    display: flex;
+    position: absolute;
+    right: 0rem;
+    margin-right: 5rem;
+    justify-content: space-between;
+}
+#reg:hover {
+    background-color: none;
+    color: #38a3a5;
+    border-color: #38a3a5;
+    transform: scale(1.1);
+}
+#log:hover {
+    transform: scale(1.1);
+}
