@@ -8,7 +8,7 @@ const { Header } = Layout;
 
 export const AppHeader = () => {
   return (
-    <Header class="app-header"
+    <Header className="app-header"
       style={{
         position: 'sticky',
         top: 0,
@@ -19,7 +19,7 @@ export const AppHeader = () => {
       }}
     >
         <div className='logo'>
-            <img id='logo' src={logo} alt='logo'/>
+            <img className='logo' src={logo} alt='logo'/>
         </div>
     </Header>
   );
