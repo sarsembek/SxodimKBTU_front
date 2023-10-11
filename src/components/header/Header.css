@@ -3,7 +3,8 @@
     margin-top: 0.75rem;
 }
 .app-header {
-    background-color: #00DFA2;
+    background: rgb(0,223,162);
+    background: linear-gradient(90deg, rgba(0,223,162,1) 0%, rgba(2,0,36,1) 100%);
     text-align: center;
 }
 .reg-block {

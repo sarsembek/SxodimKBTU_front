@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HomeFilled, DownloadOutlined, CheckCircleOutlined, MailOutlined, TeamOutlined } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Menu, Divider } from 'antd';
 import './Navbar.css'
 
 const items = [
@@ -38,7 +38,8 @@ export const Navbar = () => {
         setCurrent(e.key);
     };
     return (
-        <Menu 
+        <Menu
+            split={<Divider type="vertical" />}
             id='navbar' 
             onClick={onClick} 
             selectedKeys={[current]} 
