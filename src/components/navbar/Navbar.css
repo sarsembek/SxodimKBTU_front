@@ -1,7 +1,6 @@
 #navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     margin: 1rem 2rem;
     background: #57CC99;
     border-radius: 0.5rem;
