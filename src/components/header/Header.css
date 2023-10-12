@@ -15,7 +15,6 @@
     justify-content: space-between;
 }
 #reg:hover {
-    background-color: none;
     color: #38a3a5;
     border-color: #38a3a5;
     transform: scale(1.1);
