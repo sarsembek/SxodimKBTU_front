@@ -2,11 +2,13 @@
     width: 12rem;
     margin-top: 0.75rem;
 }
+
 .app-header {
     background: rgb(0,223,162);
     background: linear-gradient(90deg, rgba(0,223,162,1) 0%, rgba(2,0,36,1) 100%);
     text-align: center;
 }
+
 .reg-block {
     display: flex;
     position: absolute;
@@ -14,11 +16,21 @@
     margin-right: 5rem;
     justify-content: space-between;
 }
+
+#reg {
+    transition: 0.3s ease;
+}
+
+#log {
+    transition: 0.3s ease;
+}
+
 #reg:hover {
     color: #38a3a5;
     border-color: #38a3a5;
     transform: scale(1.1);
 }
+
 #log:hover {
     transform: scale(1.1);
 }
