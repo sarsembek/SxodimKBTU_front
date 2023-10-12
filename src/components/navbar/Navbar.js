@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HomeFilled, DownloadOutlined, CheckCircleOutlined, MailOutlined, TeamOutlined } from '@ant-design/icons';
-import { Menu, Divider } from 'antd';
+import { Menu } from 'antd';
 import './Navbar.css'
 
 const items = [
@@ -39,12 +39,12 @@ export const Navbar = () => {
     };
     return (
         <Menu
-            split={<Divider type="vertical" />}
             id='navbar' 
             onClick={onClick} 
             selectedKeys={[current]} 
-            mode="horizontal" 
+            mode="inline" 
             items={items} 
+            inlineIndent={100}
         />
     )
 }
