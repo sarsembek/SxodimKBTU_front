@@ -1,0 +1,18 @@
+.searchDiv {
+    width: 400px;
+    height: 12px;
+    margin-left: 1000px;
+    margin-bottom: 26px;
+    position: relative;
+}
+.list{
+    width: 360px;
+    position: absolute;
+    top: 40px;
+    display: none;
+    z-index: 1;
+    background-color: aliceblue;
+}
+.open{
+    display: block!important;
+}
