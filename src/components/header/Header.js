@@ -1,6 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { Layout, Button, Space, Divider } from 'antd';
+import { SearchField } from '../search/Search';
 import logo from './radar.png';
 import './Header.css'
 
@@ -14,13 +15,14 @@ export const AppHeader = () => {
         top: 0,
         zIndex: 1,
         width: '100%',
-        display: 'flex',
-        alignItems: 'center',
       }}
     >
         <div className='logo'>
             <img className='logo' src={logo} alt='logo'/>
         </div>
+        <SearchField
+          id='search'
+        />
         <Space 
           className='reg-block'
           split={<Divider type="vertical" style={{height: '2rem', background: 'white'}}/>}

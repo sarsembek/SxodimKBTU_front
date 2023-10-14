@@ -4,16 +4,16 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
-export const searchField = () => {
+export const SearchField = () => {
     return(
         <Search
-    placeholder="input search text"
-    onSearch={onSearch}
-    style={{
-      width: 200,
-      
-    }}
-  />
+          placeholder="Search for torrents"
+          onSearch={onSearch}
+          // loading={true}
+          style={{
+            width: 400
+          }}
+        />
     ) 
 }
-export default searchField;
+export default SearchField;
