@@ -12,7 +12,7 @@ const items = [
     {
         label: 'Upload',
         key: 'upload',
-        icon: <DownloadOutlined />
+        icon: <DownloadOutlined />,
     },
     {
         label: 'Rules',
