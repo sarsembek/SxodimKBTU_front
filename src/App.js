@@ -9,8 +9,6 @@ function App() {
       <AppHeader />
       <Navbar />
       <Sidebar/>
-  
-
     </div>
   );
 }
