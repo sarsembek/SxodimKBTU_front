@@ -1,7 +1,7 @@
   // src/components/Header.js
 import React from 'react';
 import { Layout, Button, Space, Divider } from 'antd';
-import { SearchField } from '../search/Search';
+import { SearchField } from '../search/search';
 import logo from './radar.png';
 import './Header.css';
 
