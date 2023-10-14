@@ -1,9 +1,6 @@
 #sidebar{
     border: 0.5px solid;
     border-radius: 0.5rem;
-    position: absolute;
-    right: 2rem;
-    margin-left: auto; 
     text-align: left;
     background: rgba(56, 163, 165, 0.64);
     border-radius: 16px;

@@ -1,2 +1,8 @@
 
 
+#side-news{
+    display: block;
+    position: absolute;
+    right: 2rem;
+    margin-left: auto; 
+}
