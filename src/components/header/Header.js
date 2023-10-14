@@ -4,7 +4,6 @@ import { Layout, Button, Space, Divider } from 'antd';
 import { SearchField } from '../search/Search';
 import logo from './radar.png';
 import './Header.css';
-import SearchField from '../search/search';
 
 const { Header } = Layout;
 

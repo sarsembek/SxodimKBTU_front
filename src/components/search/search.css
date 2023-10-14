@@ -1,17 +1,16 @@
 .searchDiv {
-    width: 400px;
-    height: 12px;
-    margin-left: 1000px;
-    margin-bottom: 26px;
-    position: relative;
+    width: 25rem;
+    height: 2.5rem;
 }
 .list{
-    width: 360px;
+    width: 22.5rem;
     position: absolute;
-    top: 40px;
+    top: 3rem;
     display: none;
     z-index: 1;
     background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .open{
     display: block!important;
