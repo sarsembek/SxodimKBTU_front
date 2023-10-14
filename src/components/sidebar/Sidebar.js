@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { VideoCameraOutlined, PlaySquareOutlined, RocketOutlined, InsuranceOutlined, DesktopOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import './Sidebar.css';
