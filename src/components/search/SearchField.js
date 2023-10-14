@@ -1,4 +1,4 @@
-import { useState, useOu } from "react";
+import { useState } from "react";
 import React from 'react';
 import { Input } from "antd";
 import './Search.css';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Divider } from 'antd';
+import { Card } from 'antd';
 import './Newsbox.css'
 
 export const Newsbox = () => (
