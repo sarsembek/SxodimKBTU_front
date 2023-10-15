@@ -4,16 +4,15 @@
 }
 
 .app-header {
-    background: rgb(0,223,162);
     background: linear-gradient(90deg, rgba(0,223,162,1) 0%, rgba(2,0,36,1) 100%);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .reg-block {
     display: flex;
-    position: absolute;
     right: 0rem;
-    margin-right: 5rem;
     justify-content: space-between;
 }
 

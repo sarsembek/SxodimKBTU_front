@@ -6,6 +6,7 @@ import {Sidebar} from './components/sidebar/Sidebar'
 import { Newsbox } from './components/newsbox/Newsbox'
 import { Footer } from './components/footer/Footer'
 
+
 function App() {
   return (
     <div className="App">
