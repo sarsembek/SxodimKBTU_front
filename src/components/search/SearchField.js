@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from 'react';
 import { Input } from "antd";
-import './Search.css';
+import './SearchField.css';
 
 const { Search } = Input;
 

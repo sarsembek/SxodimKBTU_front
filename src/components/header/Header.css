@@ -13,7 +13,6 @@
 .reg-block {
     display: flex;
     right: 0rem;
-    margin-right: 5rem;
     justify-content: space-between;
 }
 
