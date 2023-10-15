@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Divider } from 'antd';
+import { Card } from 'antd';
 import './Newsbox.css'
 
 export const Newsbox = () => (
@@ -13,12 +13,19 @@ export const Newsbox = () => (
         background: '#ced4da',
         borderBottom: '0.5px solid #B4B4B3', 
       }}
-      bodystyle={{
+      bodyStyle={{
         background: 'white',
       }}
     >
-      <p>Last update: 14.10.2023</p>
-      <p>Added news box</p>
-      <p><strong>Ormon</strong></p>
+      <div className='scrollable-content'>
+        <p>Last update: 14.10.2023</p>
+        <p>Added news box</p>
+        <p><strong>Ormon</strong></p>
+        <p>Salam</p>
+        <p>che tam</p>
+        <p>aaa</p>
+        <p>sssss</p>
+        <p>sacs</p>
+      </div>
     </Card>
 );
