@@ -4,5 +4,15 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+}
+
+.scrollable-content{
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888; /* Set the background color of the thumb */
+  border-radius: 6px; /* Set the border radius for rounded corners */
 }

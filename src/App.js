@@ -4,6 +4,7 @@ import AppHeader from './components/header/Header';
 import { Navbar } from './components/navbar/Navbar';
 import {Sidebar} from './components/sidebar/Sidebar'
 import { Newsbox } from './components/newsbox/Newsbox'
+import { Footer } from './components/footer/Footer'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Sidebar/>
         <Newsbox/>
       </Space>
+      <Footer/>
     </div>
   );
 }
