@@ -1,5 +1,4 @@
 import './App.css';
-import { Space } from 'antd';
 import AppHeader from './components/header/Header';
 import { Navbar } from './components/navbar/Navbar';
 import {Sidebar} from './components/sidebar/Sidebar';
@@ -14,7 +13,9 @@ function App() {
       <AppHeader />
       <Navbar />
       <div id='wrapper'>
-        <Content id="content"/>
+        <div id='content'>
+          <Content />
+        </div>
         <div id="side-news"> 
           <Sidebar/>
           <Newsbox/>

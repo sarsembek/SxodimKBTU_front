@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, List } from'antd';
+import { List } from'antd';
 import './Content.css';
 
 const torrents = [
@@ -19,23 +19,15 @@ export const Content = () => {
     return (
     <List
         id="list"
-        grid={{
-          gutter: 16,
-          xs: 1,
-          sm: 2,
-          md: 4,
-          lg: 4,
-          xl: 6,
-          xxl: 3,
-        }}
+        header="Torrent Files"
+        itemLayout="horizontal"
         dataSource={torrents}
         renderItem={(item) => (
           <List.Item>
-            <Card 
-            title={item.name}
-            id="card"
-            hoverable
-            >{item.magnetLink}</Card>
+            <List.Item.Meta
+                title={<p>{item.name}</p>}
+                description={<p>{item.magnetLink}</p>}
+            />
           </List.Item>
         )}
     />

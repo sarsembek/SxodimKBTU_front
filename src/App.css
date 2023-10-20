@@ -1,13 +1,15 @@
 #side-news{
-    float: right;
     margin-right: 2rem;
     margin-bottom: 1rem;
+    flex: 0.2;
 }
 
 #wrapper {
     display: flex;
+    width: 100%;
 }
 
 #content {
     margin-left: 2rem;
+    flex: 0.8;
 }
