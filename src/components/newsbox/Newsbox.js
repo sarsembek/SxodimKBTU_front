@@ -2,7 +2,8 @@ import React from 'react';
 import { Card } from 'antd';
 import './Newsbox.css'
 
-export const Newsbox = () => (
+export const Newsbox = () => {
+    return (
     <Card id='newscard'
       title="News"
       extra={<a href="#">More</a>}
@@ -28,4 +29,5 @@ export const Newsbox = () => (
         <p>sacs</p>
       </div>
     </Card>
-);
+    )
+};

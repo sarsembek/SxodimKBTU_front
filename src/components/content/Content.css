@@ -1,0 +1,8 @@
+#card {
+    text-overflow: ellipsis;
+    height: auto;
+}
+
+#list {
+    margin-left: 2rem;
+}

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { VideoCameraOutlined, PlaySquareOutlined, RocketOutlined, InsuranceOutlined, DesktopOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import './Sidebar.css';
-import { Divider } from 'antd'
 
 const items = [
     {
@@ -41,7 +40,7 @@ export const Sidebar = () => {
     };
 
     return(
-        <Menu split={ <Divider type="horizontal" style={{width: '2rem', background: 'black'}}/> }
+        <Menu
             id='sidebar'
             onClick={onClick}
             selectedKeys={[current]}

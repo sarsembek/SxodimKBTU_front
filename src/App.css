@@ -1,7 +1,13 @@
 #side-news{
-    display: block;
-    position: absolute;
-    right: 2rem;
-    margin-left: auto; 
-    box-sizing: border-box;
+    float: right;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#content {
+    margin-left: 2rem;
 }

@@ -1,0 +1,15 @@
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+ 
+#text-wrapper {
+    margin-right: 2rem;
+}
+
+#btn:hover {
+    transform: scale(1.05);
+}
