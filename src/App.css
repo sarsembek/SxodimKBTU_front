@@ -12,4 +12,9 @@
 #content {
     margin-left: 2rem;
     flex: 0.8;
+    margin-bottom: 1rem;
+}
+
+#footer {
+    bottom: -1rem;
 }

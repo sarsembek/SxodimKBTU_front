@@ -21,7 +21,7 @@ function App() {
           <Newsbox/>
         </div>
       </div>
-      <Footer/>
+      <Footer id="footer"/>
     </div>
   );
 }
