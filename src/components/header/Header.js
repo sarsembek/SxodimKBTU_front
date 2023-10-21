@@ -2,7 +2,7 @@
 import React from 'react';
 import { Layout, Button, Space, Divider } from 'antd';
 import { SearchField } from '../search/SearchField';
-import logo from './radar.png';
+import logo from '../assets/radar.png';
 import './Header.css';
 
 const { Header } = Layout;

@@ -16,7 +16,7 @@ function App() {
         <Sidebar/>
         <Newsbox/>
       </Space>
-      <Footer/>
+      <Footer id="footer"/>
     </div>
   );
 }

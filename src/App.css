@@ -1,7 +1,13 @@
 #side-news{
     display: block;
-    position: absolute;
     right: 2rem;
     margin-left: auto; 
     box-sizing: border-box;
+    position: absolute;
+}
+
+#footer{
+    display: block;
+    position: absolute;
+    max-height: 20px;
 }
