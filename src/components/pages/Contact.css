@@ -1,0 +1,51 @@
+/* Contact.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Apply a fixed width to all input and textarea elements */
+.input-group {
+    margin-bottom: 10px;
+    width: 100%; /* Added for consistent width */
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+.input, .textarea {
+    width: 100%; /* Ensure that all input fields have the same width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
