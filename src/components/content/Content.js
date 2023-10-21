@@ -1,6 +1,6 @@
 import React from "react";
 import { List } from'antd';
-import './Content.css';
+
 
 const torrents = [
   {

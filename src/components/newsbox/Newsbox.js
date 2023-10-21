@@ -18,12 +18,12 @@ export const Newsbox = () => {
       <div className='scrollable-content'>
         <p>Last update: 14.10.2023</p>
         <p>Added news box</p>
-        <p><strong>Ormon</strong></p>
-        <p>Salam</p>
-        <p>che tam</p>
-        <p>aaa</p>
-        <p>sssss</p>
-        <p>sacs</p>
+        <p><strong>Antd</strong></p>
+        <p>React</p>
+        <p>Routing</p>
+        <p>CSS</p>
+        <p>HTML</p>
+        <p>JS</p>
       </div>
     </Card>
     )

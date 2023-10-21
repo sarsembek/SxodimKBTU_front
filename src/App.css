@@ -1,4 +1,5 @@
 #side-news{
+    align-items: start;
     margin-right: 2rem;
     margin-bottom: 1rem;
     flex: 0.2;
@@ -7,12 +8,21 @@
 #wrapper {
     display: flex;
     width: 100%;
+    align-items: start;
 }
 
 #content {
     margin-left: 2rem;
     flex: 0.8;
     margin-bottom: 1rem;
+    width: auto;
+    padding: 1rem;
+    border-radius: 1rem ;
+    margin-right: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(166, 166, 166, 0.3);
 }
 
 #footer {
