@@ -1,6 +1,6 @@
-import React from 'react';
-import { AutoComplete   } from "antd";
-import './SearchField.css';
+import React from "react";
+import { List } from'antd';
+import './Content.css';
 
 const torrents = [
   {
@@ -66,27 +66,21 @@ const torrents = [
 ];
 
 
-
-export const SearchField = () => {
-  const [searchResults, setSearchResults] = React.useState(torrents);
-
-  const fetchSearchResults = async (query) => {
-    const results = torrents.filter((torrent) => torrent.name.toLowerCase().includes(query));
-    setSearchResults(results);
-  };
-
-  return (
-    <AutoComplete
-      options={searchResults}
-      onSearch={fetchSearchResults}
-      placeholder="Search..."
-      allowClear="true"
-      style={{ 
-        overflow: "auto", 
-        height: "3rem",
-        width: "22.5rem",
-      }}
+export const Content = () => {
+    return (
+    <List
+        id="list"
+        header="Torrent Files"
+        itemLayout="horizontal"
+        dataSource={torrents}
+        renderItem={(item) => (
+          <List.Item>
+            <List.Item.Meta
+                title={<p>{item.name}</p>}
+                description={<p>{item.magnetLink}</p>}
+            />
+          </List.Item>
+        )}
     />
-  );
-};
-export default SearchField;
+    )
+}

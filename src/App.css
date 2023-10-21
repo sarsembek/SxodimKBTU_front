@@ -1,13 +1,20 @@
 #side-news{
-    display: block;
-    right: 2rem;
-    margin-left: auto; 
-    box-sizing: border-box;
-    position: absolute;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    flex: 0.2;
 }
 
-#footer{
-    display: block;
-    position: absolute;
-    max-height: 20px;
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#content {
+    margin-left: 2rem;
+    flex: 0.8;
+    margin-bottom: 1rem;
+}
+
+#footer {
+    bottom: -1rem;
 }

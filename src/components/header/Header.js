@@ -11,11 +11,9 @@ export const AppHeader = () => {
   return (
     <Header className="app-header"
       style={{
-        
         position: 'sticky',
         top: 0,
         zIndex: 1,
-        width: '100%',
       }}
     >
         <div className='logo'>

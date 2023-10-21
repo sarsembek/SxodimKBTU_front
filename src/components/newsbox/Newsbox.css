@@ -1,9 +1,7 @@
 #newscard {
+  width: auto;
   margin-top: 1rem;
-  position: sticky;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
