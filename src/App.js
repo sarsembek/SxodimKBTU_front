@@ -5,12 +5,14 @@ import {Sidebar} from './components/sidebar/Sidebar';
 import { Newsbox } from './components/newsbox/Newsbox';
 import { Footer } from './components/footer/Footer';
 import { Content } from './components/content/Content';
+import { PageNotFound } from './components/error/PageNotFound';
 
 
 function App() {
   return (
     <div className="App">
-      <AppHeader />
+      <PageNotFound/>
+      {/* <AppHeader />
       <Navbar />
       <div id='wrapper'>
         <div id='content'>
@@ -21,7 +23,7 @@ function App() {
           <Newsbox/>
         </div>
       </div>
-      <Footer id="footer"/>
+      <Footer id="footer"/> */}
     </div>
   );
 }
