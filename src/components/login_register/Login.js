@@ -1,87 +1,56 @@
-import React from 'react';
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Form, Input } from 'antd';
+import React,{useState} from 'react';
+import {  UserOutlined } from '@ant-design/icons';
 import './Login.css';
+import { auth } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export const Login = () => {
-  const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-  };
-
-  const formStyle = {
-    width: '300px', // Set the width of the form
-    margin: '0 auto', // Center the form horizontally
-  };
-
-  const iconStyle = {
-    color: 'rgba(0, 0, 0, 0.25)', // Adjust icon color
-  };
-
-  const buttonStyle = {
-    width: '100%', // Set the width of the button to 100%
-  };
-
-  return (
-    <Form
-      id='form'
-      name="normal_login"
-      className="login-form"
-      initialValues={{
-        remember: true,
-      }}
-      onFinish={onFinish}
-      style={formStyle}
-    >
-      <Form.Item
-        name="username"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your Username!',
-          },
-        ]}
-      >
-        <Input
-          prefix={<UserOutlined style={iconStyle} />}
-          placeholder="Username"
-        />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your Password!',
-          },
-        ]}
-      >
-        <Input
-          prefix={<LockOutlined style={iconStyle} />}
-          type="password"
-          placeholder="Password"
-        />
-      </Form.Item>
-      <Form.Item>
-        <Form.Item name="remember" valuePropName="checked" noStyle>
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-
-        <a className="login-form-forgot" href="">
-          Forgot password
-        </a>
-      </Form.Item>
-
-      <Form.Item>
-        <Button
-          type="primary"
-          htmlType="submit"
-          className="login-form-button"
-          style={buttonStyle}
-        >
-          Log in
-        </Button>
-        Or <a href="">register now!</a>
-      </Form.Item>
-    </Form>
-  );
+  const [userName,setUserName]=useState('');
+  const[password,setPassword]=useState('');
+  const signIn = (e) =>{
+    e.preventDefault();
+    signInWithEmailAndPassword(auth,userName,password)
+    .then((useCredential)=>{
+      console.log(useCredential)
+    }).catch((error)=>{
+      console.log(error);
+    })
+  }
+ return(
+   <div id='main'>
+      <form id='logDiv' onSubmit={signIn}>
+        <div >
+        <UserOutlined  style={{
+          width:'1.5em',
+          fontSize:'5em',
+          backgroundColor:'#38a3a5',
+          color:'#000',
+          marginBottom:'0.8em',
+          border:'2px solid #000',
+          borderRadius:'100%'
+        }}/>
+        </div>
+        <div id='Username'>
+          <input 
+          id='username'
+           placeholder='Username'
+          type='text'
+          value={userName}
+          onChange={(e)=>setUserName(e.target.value)}
+             ></input>
+        </div>
+        <div id='Password'>
+          <input 
+          id='password' 
+          placeholder='Password'
+          type='password' 
+          value={password}
+          onChange={(e)=>setPassword(e.target.value)}
+          ></input>
+        </div>
+        <button type='submit' id='logButton'>Log in</button>
+        <a>Forgot password?</a>
+      </form>
+   </div>
+ );
 };
