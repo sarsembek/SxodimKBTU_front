@@ -17,7 +17,7 @@ export const PageNotFound = () => {
                         type="primary" 
                         size='large'
                         style={{
-                            background: "#38a3a5",
+                            background: "#758bfd",
                             transition: "0.3s ease"
                         }}
                     >

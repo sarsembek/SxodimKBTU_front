@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import './Footer.css';
-import logo from '../assets/radar.png';
+import logo from '../assets/logo.png';
 
 export const Footer = () => {
   return (
