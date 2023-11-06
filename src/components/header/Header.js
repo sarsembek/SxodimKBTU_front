@@ -12,7 +12,6 @@ export const AppHeader = () => {
   return (
     <Header className="app-header"
       style={{
-        position: 'sticky',
         top: 0,
         zIndex: 1,
       }}
@@ -25,14 +24,14 @@ export const AppHeader = () => {
         />
         <Space 
           className='reg-block'
-          split={<Divider type="vertical" style={{height: '2rem', background: 'white'}}/>}
+          split={<Divider type="vertical" style={{height: '2rem', background: '#758bfd'}}/>}
         >
           <Link to="/login">
-            <Button id='log' type='primary'style={{background:"#38a3a5"}}>Log In</Button>
+            <Button id='log' type='primary'style={{background:"#758bfd"}}>Log In</Button>
           </Link>
 
           <Link to="/register">
-            <Button id='reg' ghost>Register</Button>
+            <Button id='reg' ghost style={{color:"#27187e", borderColor: "#27187e"}}>Register</Button>
           </Link>
         </Space>
     </Header>

@@ -2,10 +2,10 @@
     display: flex;
     width: auto;
     margin: 1rem 2rem;
-    background: rgba(87, 204, 153, 0.46);
+    background: rgba(174, 184, 254, 0.47);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(87, 204, 153, 0.33);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(174, 184, 254, 0.32);
 }

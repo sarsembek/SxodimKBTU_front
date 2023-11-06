@@ -4,11 +4,12 @@
 }
 
 .app-header {
-    background: linear-gradient(90deg, rgba(0,223,162,1) 0%, rgba(2,0,36,1) 100%);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 0.05rem solid #aeb8fe;
 }
 
 .reg-block {
