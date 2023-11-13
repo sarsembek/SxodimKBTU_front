@@ -1,45 +1,46 @@
 import React from 'react';
-import { Row, Col, Card } from 'antd';
+import { InstagramFilled, LinkedinFilled } from 'antd';
 import './Footer.css';
+<<<<<<< HEAD
+=======
 import logo from '../assets/logo.png';
+>>>>>>> 98ddd42b68c75e371a44c123a1743060e83e3e82
 
 export const Footer = () => {
   return (
-  <footer className="footer">
-    <div className="footer-logo">
-      <img src={logo} alt="Company Logo" id='logo' />
-    </div>
+    <footer className="site-footer">
+      <div className="footer-content">
+        <div className="footer-column">
+          <h3 className="footer-header">ABOUT US</h3>
+          <p>This is a project for collecting all events in one place.</p>
+        </div>
 
-  <Row gutter={16}>
-    <Col span={8}>
-      <Card className='card' title="About Us">
-        <p>Download everything you want!</p>
-      </Card>
-    </Col>
+        <div className="footer-column">
+          <h3 className="footer-header">CONTACT US</h3>
+          <p>You are welcome!</p>
+          <p>Email: ar_sarsembek@kbtu.kz</p>
+          <p>Location: KBTU</p>
+        </div>
 
-    <Col span={8}>
-      <Card className='card' title="Contact Info">
-        <p>
-          Address: 123 Main St<br />
-          Phone: (555) 555-5555<br />
-          Email: info@example.com
-        </p>
-      </Card>
-    </Col>
+        <div className="footer-column">
+          <h3 className="footer-header">SOCIAL MEDIA</h3>
 
-    <Col span={8}>
-      <Card className='card' title="Important Links">
-        <ul>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </Card>
-    </Col>
-  </Row>
-</footer>
-
+          <ul className="social-media-links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/arman-sarsembek-630745232/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-media-link"
+              >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
+
