@@ -1,47 +1,54 @@
-#main{
-    background: linear-gradient(90deg, rgb(36, 167, 132) 0%, rgba(2,0,36,1) 100%);
-    width: 100%;
+.title {
+    background: linear-gradient(90deg, rgba(117,139,253,1) 0%, rgba(174,184,254,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0!important;
+}
+
+.right-block {
+    margin-left: 2rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    background: linear-gradient(to right,#aeb8fe 10%, #f1f2f6 90%);
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(166, 166, 166, 0.3);
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+
+.wrapper {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #e5e5f7;
 }
-#logDiv{
-    background-color: aliceblue;
-    width: 20rem;
-    height: 25rem;
-    border: 0.1rem solid 
-     rgb(205, 238, 229) ;
-    border-radius: 18%;
-    box-shadow: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-#username{
-    width: 13rem;
-    height: 2rem;
-    background-color: aliceblue;
-    border: none; /* Remove all borders */
-    border-bottom: 2px solid #000;
-    margin-bottom: 1rem;
+
+#btn {
+    width: 100%;
 }
-#password{
-    width: 13rem;
-    height: 2rem;
-    background-color: aliceblue;
-    border: none; /* Remove all borders */
-    border-bottom: 2px solid #000;
-    margin-bottom: 0.9rem; 
+
+#link {
+    color:#f1f2f6;
+    transition: all 0.5s;
 }
-#logButton{
-    width: 13rem;
-    height: 2.5rem;
-    border-radius: 42%;
-    background-color: #38a3a5;
-}
-a{
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
+
+#link:hover {
+    color: #27187e;
 }

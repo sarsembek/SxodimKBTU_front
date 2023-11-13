@@ -1,6 +1,10 @@
 import React from 'react';
 import { InstagramFilled, LinkedinFilled } from 'antd';
 import './Footer.css';
+<<<<<<< HEAD
+=======
+import logo from '../assets/logo.png';
+>>>>>>> 98ddd42b68c75e371a44c123a1743060e83e3e82
 
 export const Footer = () => {
   return (
