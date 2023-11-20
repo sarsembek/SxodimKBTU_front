@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const { Header } = Layout;
 
-export const AppHeader = () => {
+export const AppHeader = (events) => {
   return (
     <Header className="app-header"
       style={{
@@ -21,6 +21,7 @@ export const AppHeader = () => {
         </div>
         <SearchField
           id='search'
+          events={events}
         />
         <Space 
           className='reg-block'

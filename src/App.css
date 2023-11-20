@@ -13,6 +13,7 @@
 }
 
 #content {
+    min-height: 78.5vh;
     margin-left: 2rem;
     flex: 0.8;
     margin-bottom: 1rem;

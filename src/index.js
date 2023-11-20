@@ -7,11 +7,10 @@ import { PageNotFound } from './components/error/PageNotFound';
 import { Content } from './components/content/Content';
 import { Login } from './components/login_register/Login';
 import { Register } from './components/login_register/Register';
-import { Contact } from './components/pages/Contact'
+import { Contact } from './components/pages/Contact';
 
-/*routing*/
+
 import {
-    BrowserRouter,
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";

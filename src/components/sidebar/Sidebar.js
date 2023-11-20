@@ -1,33 +1,44 @@
 import React, { useState } from "react";
-import { VideoCameraOutlined, PlaySquareOutlined, RocketOutlined, InsuranceOutlined, DesktopOutlined } from '@ant-design/icons';
+
 import { Menu } from 'antd';
 import './Sidebar.css';
+import { TeamOutlined, 
+         ToolOutlined, 
+         HeartOutlined, 
+         BookOutlined, 
+         ThunderboltOutlined, 
+         MoreOutlined } from "@ant-design/icons";
 
 const items = [
     {
-        label: 'Movies',
-        key: 'movies',
-        icon: <VideoCameraOutlined />
+        label: 'Lecture',
+        key: 'lecture',
+        icon: <BookOutlined />
     },
     {
-        label: 'Serials',
-        key: 'serials',
-        icon: <PlaySquareOutlined />
+        label: 'Workshop',
+        key: 'workshop',
+        icon: <ToolOutlined />
     },
     {
-        label: 'Games',
-        key: 'games',
-        icon: <RocketOutlined />
+        label: 'Social Event',
+        key: 'social',
+        icon: <HeartOutlined />
     },
     {
-        label: 'Anime',
-        key: 'anime',
-        icon: <InsuranceOutlined />
+        label: 'Conference',
+        key: 'conf',
+        icon: <TeamOutlined />
     },
     {
-        label: 'Software',
-        key: 'software',
-        icon: <DesktopOutlined />
+        label: 'Party',
+        key: 'party',
+        icon: <ThunderboltOutlined />
+    },
+    {
+        label: 'Other',
+        key: 'other',
+        icon: <MoreOutlined />
     }
 ]
 
