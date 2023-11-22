@@ -4,6 +4,7 @@ import AnimationPage from "./AnimationPage";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 import './PageNotFound.css';
+import animation from './404.json';
 
 export const PageNotFound = () => {
     return(
@@ -25,7 +26,7 @@ export const PageNotFound = () => {
                     </Button>
                 </Link>
             </div>
-            <AnimationPage/>
+            <AnimationPage animationData={animation}/>
         </Space>
     );
 };

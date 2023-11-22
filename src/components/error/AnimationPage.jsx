@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Lottie from 'react-lottie';
-import animationData from './404.json'
-class AnimationPage extends Component {
-    render() {
-        const defaultOptions = {
-            loop: true,
-            autoplay: true,
-            animationData: animationData,
-            renderer: 'svg'
-        }
-        return (
-            <div>
-               <Lottie
-                options={defaultOptions}
-                height={600}
-                width={600}
-               />
-            </div>
-        )
-    };  
-}
+
+const AnimationPage = (props) => {
+  const [animationData, setAnimationData] = useState(props.animationData);
+  const [width, height] = [props.width, props.height];
+
+  return (
+    <div>
+      <Lottie
+        options={{
+          loop: true,
+          autoplay: true,
+          animationData,
+          renderer: 'svg',
+        }}
+        height={width}
+        width={height}
+      />
+    </div>
+  );
+};
+  
 export default AnimationPage;

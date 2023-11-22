@@ -13,6 +13,9 @@
 }
 
 #content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     min-height: 78.5vh;
     margin-left: 2rem;
     flex: 0.8;
