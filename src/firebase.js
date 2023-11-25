@@ -6,12 +6,14 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAehqbbgvenORpyOI6R7PzdGHmsnmbYcLo",
-  authDomain: "react-auth-4528f.firebaseapp.com",
-  projectId: "react-auth-4528f",
-  storageBucket: "react-auth-4528f.appspot.com",
-  messagingSenderId: "478380130204",
-  appId: "1:478380130204:web:3f6088b76d178bedbe9259"
+  apiKey: "AIzaSyBlT0TcuJ-HUt0qRZIMNtK_qLpeG61x6fA",
+  authDomain: "sxodimkbtu.firebaseapp.com",
+  databaseURL: "https://sxodimkbtu-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "sxodimkbtu",
+  storageBucket: "sxodimkbtu.appspot.com",
+  messagingSenderId: "812741817728",
+  appId: "1:812741817728:web:ca18ad2187190f1cd8bd65",
+  measurementId: "G-TECMY71WV6"
 };
 
 // Initialize Firebase
