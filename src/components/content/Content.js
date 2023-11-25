@@ -17,8 +17,8 @@ export const Content = () => {
       })
       .catch(error => { 
         console.error(error);
-        // setTimeout(5000);
-        // setLoading(false);
+        setTimeout(5000);
+        setLoading(false);
       });
   }, []);
     return (
