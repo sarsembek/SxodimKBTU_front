@@ -33,3 +33,21 @@
 #footer {
     bottom: -1rem;
 }
+
+.ant-list-empty-text {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 10px 0;
+    min-height: 76vh;
+    height: 100%;
+}
+
+#spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 75vh;
+}
