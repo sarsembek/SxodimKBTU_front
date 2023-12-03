@@ -10,7 +10,7 @@ export const Content = () => {
   const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/getEvents')
+    axios.get('https://sxodim-kbtu.onrender.com/getEvents')
       .then(response => {
         setEvents(response.data);
         setLoading(false);

@@ -8,7 +8,7 @@ export const SearchField = () => {
   const [events, setEvents] = useState([]);
   
   useEffect(() => {
-    axios.get('http://localhost:8080/getEvents')
+    axios.get('https://sxodim-kbtu.onrender.com/getEvents')
     .then(response => response.data)
     .then(data => {
       const transformedData = data.map(event => ({
