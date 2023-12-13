@@ -1,26 +1,15 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
-import { Card, List, Spin } from'antd';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card, List, Spin, Button } from'antd';
 import EventTag from "../tags/EventTag";
 import NoData from "../error/NoData";
+import { useEventContext } from "../../context/EventContext";
+
 
 
 export const Content = () => {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const { events, loading }= useEventContext();
 
-  useEffect(() => {
-    axios.get('https://sxodim-kbtu.onrender.com/getEvents')
-      .then(response => {
-        setEvents(response.data);
-        setLoading(false);
-      })
-      .catch(error => { 
-        console.error(error);
-        setTimeout(5000);
-        setLoading(false);
-      });
-  }, []);
     return (
       <div>
       {loading ? <div id="spin"><Spin size='large'/><p style={{color: "#27187e"}}>Loading Events</p></div > :
@@ -35,9 +24,16 @@ export const Content = () => {
             <List.Item>
               <Card 
                 title={item.name}
-                extra={<EventTag eventType={item.eventType}/>}
+                extra={<EventTag 
+                  eventType={item.eventType}/>}
+                style={{
+                  minHeight: "13rem",
+                }}
               >
-                <p>{item.description}</p>
+                <p style={{minHeight: "3rem"}}>{item.description}</p>
+                <Link to={`/event/${item.eventID}`}>
+                  <Button type="primary" style={{background: "#aeb8fe"}}>Explore</Button>
+                </Link>
               </Card>
             </List.Item>
           )}

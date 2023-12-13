@@ -7,13 +7,16 @@ import { PageNotFound } from './components/error/PageNotFound';
 import { Content } from './components/content/Content';
 import { Login } from './components/login_register/Login';
 import { Register } from './components/login_register/Register';
-import { Contact } from './components/pages/Contact';
+import { Contact } from './pages/Contact';
 
 
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import { AuthProvider } from './context/AuthContext';
+import EventDetails from './components/event/EventDetails';
+import { EventProvider } from './context/EventContext';
 
 const router = createBrowserRouter([
     {
@@ -40,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: "/about_us",
                 element: <PageNotFound />
+            },
+            {
+                path: "/event/:id",
+                element: <EventDetails />
             }
         ]
     },
@@ -55,7 +62,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <RouterProvider router = {router} basename="/home"/>
+        <AuthProvider>
+            <EventProvider>
+                <RouterProvider router = {router} basename="/home"/>
+            </EventProvider>
+        </AuthProvider>
     </React.StrictMode>
 );
 

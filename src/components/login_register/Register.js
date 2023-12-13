@@ -1,53 +1,84 @@
 import React, { useState } from 'react';
-import './Register.css';
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../../firebase';
+import { Form, Input, Button, Typography } from 'antd';
+import { useAuth } from '../../context/AuthContext';
+
+const { Title } = Typography;
 
 export const Register = () => {
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('') 
+  const [loading, setLoading] = useState(false);
+  const { signup } = useAuth();
+  const [form] = Form.useForm();
 
-  const regIn = (e) => {
-    e.preventDefault();
-    createUserWithEmailAndPassword(auth, userName, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  const onFinish = async (values) => {
+    setLoading(true);
+
+    const { email, password } = values;
+
+    try {
+      await signup(email, password);
+      // Handle successful signup, e.g., redirect to a new page
+    } catch (error) {
+      console.error('Registration failed:', error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div id='main1'>
-      <form id='regDiv' onSubmit={regIn}>
-        <h1 style={{ color: "#fff" }}>Sign Up</h1>
-        <div>
-          <input
-            className='inputs'
-            placeholder='Username'
-            type='text'
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </div>
-        <div>
-          <input className='inputs' placeholder='Email' type='text' />
-        </div>
-        <div>
-          <input
-            className='inputs'
-            placeholder='Password'
-            type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <input className='inputs' placeholder='Confirm password' type='password' />
-        </div>
-        <button id='regButton' type='submit'>Create Account</button>
-      </form>
+      <Form
+        form={form}
+        onFinish={onFinish}
+        id='regDiv'
+        style={{ maxWidth: '300px', margin: 'auto' }}
+      >
+        <Title level={3} style={{ color: '#fff', textAlign: 'center' }}>
+          Sign Up
+        </Title>
+        <Form.Item
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your email!',
+            },
+            {
+              type: 'email',
+              message: 'Invalid email format!',
+            },
+          ]}
+        >
+          <Input placeholder='Email' className='inputs' />
+        </Form.Item>
+        <Form.Item
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your password!',
+            },
+            {
+              min: 6,
+              message: 'Password must be at least 6 characters!',
+            },
+          ]}
+        >
+          <Input.Password placeholder='Password' className='inputs' />
+        </Form.Item>
+        <Form.Item>
+          <Button
+            id='regButton'
+            type='primary'
+            htmlType='submit'
+            loading={loading}
+            style={{ width: '100%' }}
+          >
+            Create Account
+          </Button>
+        </Form.Item>
+      </Form>
     </div>
   );
 };
+
+export default Register;
