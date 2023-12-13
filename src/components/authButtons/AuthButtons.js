@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
-import { Space, Divider, Button, Spin, Drawer } from 'antd';
+import { Space, Divider, Button, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import ProfileUpdate from '../updateProfile/UpdateProfile';
 import CustomDrawer from '../drawer/Drawer';
 
 const AuthButtons = () => {
   const { currentUser, logout } = useAuth();
   const [open, setOpen] = useState(false);
 
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
 
   // If the user is authenticated, display their name
   if (currentUser) {

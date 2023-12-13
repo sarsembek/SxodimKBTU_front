@@ -1,10 +1,10 @@
 import React from 'react';
 import { Modal, Button } from 'antd';
 
-export const LoginErrorModal = ({ onClose, isOpen }) => {
+export const ErrorModal = ({ onClose, isOpen, message, type }) => {
   return (
     <Modal
-      title="Login Error"
+      title={type}
       open={isOpen}
       onCancel={onClose}
       onOk={onClose}
@@ -14,9 +14,9 @@ export const LoginErrorModal = ({ onClose, isOpen }) => {
         </Button>,
       ]}
     >
-      <p>Invalid email or password. Please try again.</p>
+      <p>{message}</p>
     </Modal>
   );
 };
 
-export default LoginErrorModal;
+export default ErrorModal;

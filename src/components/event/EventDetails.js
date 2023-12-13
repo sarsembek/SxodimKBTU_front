@@ -9,7 +9,7 @@ const { Title, Text } = Typography;
 const EventDetails = () => {
     const { events, loading } = useEventContext();
     const { id } = useParams();
-    const foundEvent = events.find((event) => event.eventID == id);
+    const foundEvent = events.find((event) => event.eventID === Number(id));
 
     useEffect(() => {
         const contentElement = document.getElementById('content');

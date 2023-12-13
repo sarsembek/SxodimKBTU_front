@@ -1,5 +1,4 @@
-import React, { useState, useEffect, } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { AutoComplete } from "antd";
 import './SearchField.css';
 import { useEventContext } from '../../context/EventContext';

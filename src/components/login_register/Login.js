@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, Spin } from 'antd';
 import './Login.css';
-import beam from '../assets/beam.png';
+import image from '../assets/login.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LoadingOutlined } from '@ant-design/icons';
-import { LoginErrorModal } from '../error/LoginErrorModal';
+import { ErrorModal } from '../error/ErrorModal';
 
 
 const onFinishFailed = (errorInfo) => {
@@ -15,6 +15,7 @@ const onFinishFailed = (errorInfo) => {
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError ] = useState('');
   const [ errorModalIsOpen, setErrorModalIsOpen ] = useState(false);
   const { login, loading } = useAuth();
   console.log(login);
@@ -24,7 +25,8 @@ export const Login = () => {
       await login(email, password);
       navigate("/home");
     } catch (error) {
-      setErrorModalIsOpen(true)
+      setError(error);
+      setErrorModalIsOpen(true);
       console.error('Authentication Error:', error);
     }
   };
@@ -100,12 +102,14 @@ export const Login = () => {
           </Form>
           <div className='right-block'>
             <h3 className='title'>Here, you can log in to your account<br /> to access upcoming events,<br /> register for events, and manage <br /> your event registrations.</h3>
-            <img src={beam} />
+            <img src={image} height='275px' alt='Sign In' />
           </div>
         </div>
-        <LoginErrorModal
+        <ErrorModal
           isOpen={errorModalIsOpen}
           onClose={() => setErrorModalIsOpen(false)}
+          message={error.message}
+          type="Login Error"
         />
       </div>
     </Spin>
