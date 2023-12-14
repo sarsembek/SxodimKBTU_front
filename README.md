@@ -82,6 +82,11 @@ To set up the Sxodim KBTU Event Management System locally, follow these steps:
 
 Contributions are welcome! Please follow our [Contribution Guidelines](CONTRIBUTING.md) for details.
 
+## Contributors
+- [Arman Sarsembek](https://github.com/sarsembek)
+- [Dinmukhammed Rakhmanberdiev](https://github.com/Dinmukhameddd)
+- [Akimbek Orazgaliyev](https://github.com/a1k2i3m4)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for details.
