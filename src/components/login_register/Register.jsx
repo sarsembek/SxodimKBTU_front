@@ -5,7 +5,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import "./Register.css";
-import image from '../assets/register.svg';
+import image from '../../assets/register.svg';
 
 export const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -21,7 +21,7 @@ export const Register = () => {
 
     try {
       await signup(email, password);
-      navigate("/home");
+      navigate("/register");
       // Handle successful signup, e.g., redirect to a new page
     } catch (error) {
       setError(error);

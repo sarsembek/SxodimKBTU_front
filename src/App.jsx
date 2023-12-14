@@ -9,11 +9,14 @@ import { Footer } from './components/footer/Footer';
 
 export const App = () => {
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   
-  // useEffect(() => {
-  //   navigate('/home')
-  // }, [])
+  useEffect(() => {
+    // Check if the current URL is the root ("/")
+    if (window.location.pathname === '/') {
+      navigate('/event');
+    }
+  }, [navigate]);
 
   return (
       <div className="App" >

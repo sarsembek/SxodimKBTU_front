@@ -12,7 +12,7 @@ export const PageNotFound = () => {
             <div id='text-wrapper'>
                 <h1>Oh No!<br/>Error 404</h1>
                 <p>This page doesn't exist or was removed!<br/>We suggest you back to home</p>
-                <Link to="/home">
+                <Link to="/event">
                     <Button 
                         id="btn"
                         type="primary" 

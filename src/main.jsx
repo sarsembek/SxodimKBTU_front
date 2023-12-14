@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { PageNotFound } from './components/error/PageNotFound';
 import { Content } from './components/content/Content';
 import { Login } from './components/login_register/Login';
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
         errorElement: <PageNotFound />,
         children: [
             {
-                path: "/home",
+                path: "/event",
                 element: <Content />
             },
             {
@@ -70,7 +69,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

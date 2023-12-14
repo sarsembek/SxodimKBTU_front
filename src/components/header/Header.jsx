@@ -2,7 +2,7 @@
 import React from 'react';
 import { Layout } from 'antd';
 import { SearchField } from '../search/SearchField';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 import './Header.css';
 import AuthButtons from '../authButtons/AuthButtons';
 

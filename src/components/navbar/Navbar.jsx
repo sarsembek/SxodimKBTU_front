@@ -8,7 +8,7 @@ const items = [
         label: 'Home',
         key: 'home',
         icon: <HomeFilled />,
-        to: '/home'
+        to: '/event'
     },
     {
         label: 'Upload',

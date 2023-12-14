@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, List, Spin, Button } from'antd';
 import EventTag from "../tags/EventTag";
@@ -9,6 +9,10 @@ import { useEventContext } from "../../context/EventContext";
 
 export const Content = () => {
   const { events, loading }= useEventContext();
+  useEffect(() => {
+    const contentElement = document.getElementById('content');
+    contentElement.style.justifyContent = "center";
+  },[]);
 
     return (
       <div>

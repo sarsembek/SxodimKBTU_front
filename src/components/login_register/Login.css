@@ -14,7 +14,6 @@ h1 {
 }
 
 .main {
-    background: linear-gradient(to right,#aeb8fe 10%, #f1f2f6 90%);
     width: max-content;
     margin: 0 auto;
     display: flex;
@@ -31,7 +30,11 @@ h1 {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #e5e5f7;
+    background: rgba(174, 184, 254, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
 }
 
 body {

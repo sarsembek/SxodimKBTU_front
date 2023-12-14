@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, Spin } from 'antd';
 import './Login.css';
-import image from '../assets/login.svg';
+import image from '../../assets/login.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LoadingOutlined } from '@ant-design/icons';
@@ -23,7 +23,7 @@ export const Login = () => {
   const onFinish = async () => {
     try {
       await login(email, password);
-      navigate("/home");
+      navigate("/event");
     } catch (error) {
       setError(error);
       setErrorModalIsOpen(true);

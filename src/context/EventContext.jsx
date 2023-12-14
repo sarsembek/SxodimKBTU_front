@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { format } from 'date-fns';
 
 const EventContext = createContext();
 
@@ -11,7 +12,11 @@ export const EventProvider = ({ children }) => {
         const fetchData = async () => {
           try {
             const response = await axios.get('https://sxodim-kbtu.onrender.com/getEvents');
-            setEvents(response.data);
+            const eventsWithDate = response.data.map(event => ({
+              ...event,
+              date: format(new Date(event.date), "MMMM d, yyyy HH:mm"),
+            }));
+            setEvents(eventsWithDate);
           } catch (error) {
             console.error(error);
           } finally {
@@ -22,7 +27,7 @@ export const EventProvider = ({ children }) => {
     }, []);
 
     const getEventById = (eventId) => {
-        return events.find((event) => event.event_id === eventId) || null;
+        return events.find((event) => event.eventID === Number(eventId))
     };
 
     return (

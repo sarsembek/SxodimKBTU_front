@@ -6,16 +6,21 @@ import CustomDrawer from '../drawer/Drawer';
 
 const AuthButtons = () => {
   const { currentUser, logout } = useAuth();
-  const [open, setOpen] = useState(false);
 
 
   // If the user is authenticated, display their name
   if (currentUser) {
     return (
-      <div>
+      <Space
+        split={
+          <Divider 
+            type="vertical" 
+            style={{ 
+              height: '2rem', 
+              background: '#758bfd' }} />}>
         <CustomDrawer />
         <Button id='log' type='primary' style={{ background: "#758bfd", marginLeft: "1rem" }} onClick={logout}>Log Out</Button>
-      </div>
+      </Space>
     );
   }
   if (currentUser === undefined) {
