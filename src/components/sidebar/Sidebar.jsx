@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import { Menu } from 'antd';
 import './Sidebar.css';
@@ -8,6 +9,7 @@ import { TeamOutlined,
          BookOutlined, 
          ThunderboltOutlined, 
          MoreOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const items = [
     {
@@ -44,12 +46,25 @@ const items = [
 
 export const Sidebar = () => {
 
-    const [current, setCurrent] = useState('LECTURE');
+    const [current, setCurrent] = useState(null);
+    const location = useLocation();
 
     const onClick = (e) => {
         setCurrent(e.key);
         onEventTypeChange(e.key);
     };
+
+    useEffect(() => {
+        // Extract eventType from the URL query parameters
+        const urlParams = new URLSearchParams(location.search);
+        const eventTypeFromUrl = urlParams.get('eventType');
+    
+        // Check if eventTypeFromUrl is in your items array
+        const isEventTypeValid = items.some((item) => item.key === eventTypeFromUrl);
+    
+        // Set current to eventTypeFromUrl if valid, otherwise set it to null
+        setCurrent(isEventTypeValid ? eventTypeFromUrl : null);
+    }, [location.search]);
 
     return(
         <Menu
@@ -60,7 +75,7 @@ export const Sidebar = () => {
         >   
             {items.map((item) => (
                 <Menu.Item key={item.key} icon={item.icon}>
-                    {item.label}
+                    <Link to={`/event?eventType=${item.key}`}>{item.label}</Link>
                 </Menu.Item>
             ))}
 

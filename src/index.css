@@ -11,9 +11,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary-color: #758BFD,
-  --secondary-color: #aeb8fe,
-  --last-color: #27187e,
+  --primary-color: #758BFD;
+  --secondary-color: #aeb8fe;
+  --last-color: #27187e;
+
 }
 body {
   margin: 0;
