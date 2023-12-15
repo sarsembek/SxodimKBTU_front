@@ -9,6 +9,7 @@ import { useEventContext } from "../../context/EventContext";
 
 export const Content = () => {
   const { events, loading }= useEventContext();
+
   useEffect(() => {
     const contentElement = document.getElementById('content');
     contentElement.style.justifyContent = "center";

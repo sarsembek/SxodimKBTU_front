@@ -12,42 +12,43 @@ import { TeamOutlined,
 const items = [
     {
         label: 'Lecture',
-        key: 'lecture',
+        key: 'LECTURE',
         icon: <BookOutlined />
     },
     {
         label: 'Workshop',
-        key: 'workshop',
+        key: 'WORKSHOP',
         icon: <ToolOutlined />
     },
     {
         label: 'Social Event',
-        key: 'social',
+        key: 'SOCIAL_EVENT',
         icon: <HeartOutlined />
     },
     {
         label: 'Conference',
-        key: 'conf',
+        key: 'CONFERENCE',
         icon: <TeamOutlined />
     },
     {
         label: 'Party',
-        key: 'party',
+        key: 'PARTY',
         icon: <ThunderboltOutlined />
     },
     {
         label: 'Other',
-        key: 'other',
+        key: 'OTHER',
         icon: <MoreOutlined />
     }
 ]
 
 export const Sidebar = () => {
 
-    const [current, setCurrent] = useState('movies');
+    const [current, setCurrent] = useState('LECTURE');
+
     const onClick = (e) => {
-        console.log('click ', e);
         setCurrent(e.key);
+        onEventTypeChange(e.key);
     };
 
     return(
@@ -56,7 +57,13 @@ export const Sidebar = () => {
             onClick={onClick}
             selectedKeys={[current]}
             mode="vertical"
-            items={items}
-        />
+        >   
+            {items.map((item) => (
+                <Menu.Item key={item.key} icon={item.icon}>
+                    {item.label}
+                </Menu.Item>
+            ))}
+
+        </Menu>
     )
 }
