@@ -14,7 +14,7 @@ export const Content = () => {
   const eventTypeFromUrl = queryParams.get('eventType')?.toUpperCase();
   
   useEffect(() => {
-    if(loading) {
+    if(loading || !events.length) {
       const contentElement = document.getElementById('content');
       contentElement.style.justifyContent = "center";
     }

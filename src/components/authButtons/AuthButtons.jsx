@@ -3,6 +3,7 @@ import { Space, Divider, Button, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import CustomDrawer from '../drawer/Drawer';
+import { LogoutOutlined } from '@ant-design/icons';
 
 const AuthButtons = () => {
   const { currentUser, logout } = useAuth();
@@ -19,7 +20,7 @@ const AuthButtons = () => {
               height: '2rem', 
               background: '#758bfd' }} />}>
         <CustomDrawer />
-        <Button id='log' type='primary' style={{ background: "#758bfd", marginLeft: "1rem" }} onClick={logout}>Log Out</Button>
+        <Button id='log' type='default' style={{ marginLeft: "1rem" }} onClick={logout}><LogoutOutlined /></Button>
       </Space>
     );
   }
