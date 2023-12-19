@@ -7,7 +7,7 @@ import { Content } from './components/content/Content';
 import { Login } from './components/login_register/Login';
 import { Register } from './components/login_register/Register';
 import { Contact } from './pages/Contact';
-
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import {
     createBrowserRouter,
@@ -69,3 +69,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </React.StrictMode>
 );
 
+serviceWorkerRegistration.register();

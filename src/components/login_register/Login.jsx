@@ -18,7 +18,6 @@ export const Login = () => {
   const [error, setError ] = useState('');
   const [ errorModalIsOpen, setErrorModalIsOpen ] = useState(false);
   const { login, loading } = useAuth();
-  console.log(login);
   const navigate = useNavigate();
   const onFinish = async () => {
     try {
